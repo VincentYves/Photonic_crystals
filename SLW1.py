@@ -107,26 +107,21 @@ plt.show()
 #plt.savefig(save.directory+"/"+save.name+"eps.png",transparent=False)
 
 # ===================================================================================================
-"""
+
 
 k_points = [mp.Vector3(0.25),
             mp.Vector3(0.5)]
 k_points = mp.interpolate(30, k_points)
-
-num_bands = 30
-
+num_bands = 3
 ms = mpb.ModeSolver(num_bands=num_bands,
                     k_points=k_points,
                     geometry=geometry,
                     geometry_lattice=geometry_lattice,
                     resolution=resolution)
+
 ms.run_zeven(mpb.fix_efield_phase)
-
-
 Target_band = 26
-
 freqs = ms.all_freqs
-
 fig, ax = plt.subplots()
 
 for k, omega in zip(k_points, ms.all_freqs):
@@ -175,7 +170,5 @@ plt.imshow(efield.T[:,np.int(efield.T[0,:,0].size/2),:], interpolation='spline36
 plt.subplot(1,3,3)
 plt.contour(eps_data.T[:,:,np.int(eps_data.T[0,0,:].size/2)], cmap='binary')
 plt.imshow(efield.T[:,:,np.int(efield.T[0,0,:].size/2)],interpolation='spline36', cmap='Reds')
-#plt.savefig(save.directory+"/"+save.name+"efield.png",transparent=False)
-
+#plt.savefig(save.directory+"/"+save.name+"efield.png",transparent=False
 #save.update_data_lib(efield,"efield")
-"""
