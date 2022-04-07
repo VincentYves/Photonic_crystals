@@ -63,7 +63,7 @@ def loop_SLW1(r,h,alpha,num_periods,r1,s1,x1,w,nwg=3.48,nsubs=1.45,nback=1,subst
         name = name+str(round(value))
     
 
-    root = "/home/eric/Vincent/slow_waveguide"
+    root = "enter root"
     
     if saving == 1: 
         save = sv.Data_set(name,root)
