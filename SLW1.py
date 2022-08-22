@@ -28,10 +28,9 @@ w  = 1.00        # width of waveguide
 nSi = 3.48
 Si = mp.Medium(index = nSi)
 SiO2 =  mp.Medium(index = 1.45)
-air = mp.air
 
 Waveguide_Material = Si    # Material of the slab
-Background_Material = air # Material of the holes 
+Background_Material = mp.air # Material of the holes 
 Subs_Material = SiO2 # Material of the substrate
 
 # ===================================================================================================
